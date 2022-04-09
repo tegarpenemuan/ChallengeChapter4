@@ -26,10 +26,12 @@ class LoginActivity : AppCompatActivity() {
         if (authPreferences.getBoolean(Constant.Auth.KEY.LOGIN,false)) {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         binding.tvRegister.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
+            finish()
         }
 
         binding.btnLogin.setOnClickListener {

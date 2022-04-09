@@ -111,6 +111,12 @@ class HomeActivity : AppCompatActivity() {
                         loadDataDatabase()
                         Toast(applicationContext).showCustomToast("Data Berhasil Dihapus", this@HomeActivity)
                     }
+                    val btnNo = dialog.findViewById(R.id.btnTidak) as Button
+                    btnNo.setOnClickListener {
+                        dialog.dismiss()
+                        loadDataDatabase()
+                        Toast(applicationContext).showCustomToast("Data Batal Dihapus", this@HomeActivity)
+                    }
 
                     dialog.show()
                 }
